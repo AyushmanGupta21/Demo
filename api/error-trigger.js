@@ -4,7 +4,7 @@
  */
 
 export default function handler(req, res) {
-  const { mode } = req.query;
+  const { mode } = ;
 
   if (mode === 'healthy' || !mode) {
     console.log('[INFO] [200 OK] Telemetry pipeline operational. Auto-remediation validated.');
