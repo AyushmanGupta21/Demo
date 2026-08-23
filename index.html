@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseStream // Cloud Observability & Service Dashboard</title>
+    <meta name="description" content="PulseStream — Real-time cloud observability, telemetry monitoring, and automated incident remediation for modern infrastructure teams." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <div class="logo-icon">⚡</div>
+          <span class="logo-text">Pulse<span class="highlight">Stream</span></span>
+          <span class="badge badge-pulse">
+            <span class="pulse-dot"></span>
+            LIVE
+          </span>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="nav-tabs" role="tablist">
+          <button class="nav-tab active" data-tab="dashboard" id="tab-dashboard" role="tab" aria-selected="true">
+            <span class="tab-icon">📊</span> Dashboard
+          </button>
+          <button class="nav-tab" data-tab="analytics" id="tab-analytics" role="tab" aria-selected="false">
+            <span class="tab-icon">📈</span> Analytics
+          </button>
+          <button class="nav-tab" data-tab="incidents" id="tab-incidents" role="tab" aria-selected="false">
+            <span class="tab-icon">🔔</span> Incidents
+          </button>
+          <button class="nav-tab" data-tab="settings" id="tab-settings" role="tab" aria-selected="false">
+            <span class="tab-icon">⚙️</span> Settings
+          </button>
+        </div>
+
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" title="Toggle Theme">
+            <span class="icon">🌓</span>
+          </button>
+          <a href="https://github.com/AyushmanGupta21/Demo" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <span>GitHub</span>
+          </a>
+          <button class="btn btn-primary" id="btn-trigger-action">
+            <span class="btn-dot"></span>
+            <span>Live Health Check</span>
+          </button>
+        </div>
+      </nav>
+
+      <main class="main-container">
+        <header class="hero-section">
+          <div class="hero-tag">System Status &amp; Service Telemetry</div>
+          <h1 class="hero-title">Next-Gen Autonomous Infrastructure</h1>
+          <p class="hero-subtitle">
+            Real-time health monitoring, automated failure detection, and auto-remediation telemetry pipelines.
+          </p>
+        </header>
+
+        <!-- Dynamic Container where JS renders page components -->
+        <div id="dashboard-root" class="dashboard-grid">
+          <div class="loading-skeleton">
+            <div class="spinner"></div>
+            <p>Initializing telemetry stream...</p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <p>© 2026 PulseStream Reliability Engine. Autonomous self-healing infrastructure.</p>
+          <div class="footer-links">
+            <span class="status-indicator online"></span>
+            <span>All systems operational</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
