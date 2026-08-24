@@ -1,7 +1,7 @@
 import './style.css';
 import { renderDashboardView } from './components/dashboard.js';
 import { renderMetrics } from './components/metrics.js';
-import { renderAnalytics } from './components/analytics.js';
+import { renderAnalytics } from './components/analytis.js';
 import { renderIncidents } from './components/incidents.js';
 import { renderSettings, initSettingsInteractions } from './components/settings.js';
 
