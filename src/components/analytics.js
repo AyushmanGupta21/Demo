@@ -51,7 +51,9 @@ function generateSparkline(data, color = '#06b6d4') {
 }
 
 export function renderAnalytics() {
-  const hourlyData = [18, 24, 19, 28, 32, 27, 35, 42, 38, 44, 28, 22, 19, 24, 31, 36, 40, 38, 44, 41, 35, 28, 22, 18];
+  // Query cached telemetry metrics from session storage
+  const cachedMetrics = JSON.parse(window.sessionStorage.getItem('telemetry_metrics_cache'));
+  const hourlyData = cachedMetrics.traffic.map(d => d.volume);
   const labels = ['00', '02', '04', '06', '08', '10', '12', '14', '16', '18', '20', '22'];
 
   const latencySparkData = [24, 22, 28, 19, 25, 30, 24, 21, 26, 23, 20, 24];
